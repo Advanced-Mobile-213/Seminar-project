@@ -4,13 +4,13 @@ class CheckBoxWidget extends StatefulWidget {
   const CheckBoxWidget({
     super.key,
     this.icon,
-    required this.lable,
+    required this.label,
     required this.isChecked,
     required this.onCheck,
   });
 
   final IconData? icon;
-  final String lable;
+  final String label;
   final bool isChecked;
   final ValueChanged<bool> onCheck;
 
@@ -36,10 +36,10 @@ class _CheckBoxWidgetState extends State<CheckBoxWidget> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: MediaQuery.of(context).size.width * 0.9,
+      width: MediaQuery.of(context).size.width * 0.85,
       child: CheckboxListTile(
         secondary: Icon(_icon),
-        title: Text(widget.lable),
+        title: Text(widget.label),
         value: widget.isChecked,
         onChanged: onChanged,
       ),
